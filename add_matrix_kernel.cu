@@ -26,9 +26,10 @@ torch::Tensor add_matrix_cu_forward(torch::Tensor A, torch::Tensor B) {
     const int n_row = A.size(0);
     const int n_col = A.size(1);
     const int threads = 1024;
-    const dim3 blocks((n_col + threads - 1) / threads, n_row);  // to cover all elements
+    // to cover all elements
+    const dim3 blocks((n_col + threads - 1) / threads, n_row);
 
-    // instantiate kernel
+    // invoke kernel
     AT_DISPATCH_FLOATING_TYPES(A.type(), "add_matrix_cu_forward", ([&] {
                                    add_matrix_kernel_forward<scalar_t><<<blocks, threads>>>(
                                        A.packed_accessor<scalar_t, 2, torch::RestrictPtrTraits, size_t>(),

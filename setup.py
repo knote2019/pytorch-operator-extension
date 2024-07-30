@@ -6,8 +6,8 @@ setup(
     version='1.0',
     author='kenny',
     author_email='kenny@iluvatar.com',
-    description='cppcuda example',
-    long_description='cppcuda example',
+    description='cpp cuda example',
+    long_description='cpp cuda example',
     ext_modules=[
         CUDAExtension(
             name='add_matrix_cuda',
