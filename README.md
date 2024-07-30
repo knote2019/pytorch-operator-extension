@@ -1,5 +1,3 @@
-# pytorch-operator-extension
-
 ### install.
 git clone https://github.com/knote2019/pytorch-operator-extension
 pip install .
