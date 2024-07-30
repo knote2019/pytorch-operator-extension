@@ -1,5 +1,6 @@
-import add_matrix_cuda
 import torch
+# import after torch.
+import add_matrix_cuda
 
 
 class AddMatrixFunction(torch.autograd.Function):
