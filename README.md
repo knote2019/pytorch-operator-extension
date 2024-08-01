@@ -1,10 +1,13 @@
 ### install.
+```shell
 git clone https://github.com/knote2019/pytorch-operator-extension
 cd pytorch-operator-extension
 pip install .
-
+```
 或者:
+```shell
 pip install git+https://github.com/knote2019/pytorch-operator-extension
+```
 
 ### test.
 python test.py
